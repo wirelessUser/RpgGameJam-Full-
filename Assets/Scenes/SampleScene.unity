@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 102778693}
   - component: {fileID: 102778694}
   - component: {fileID: 102778695}
+  - component: {fileID: 102778696}
   m_Layer: 0
   m_Name: Tool Effect
   m_TagString: Untagged
@@ -226,6 +227,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &102778696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102778692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58850c353ad60384690031c8485287ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1 &156046351
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +251,7 @@ GameObject:
   - component: {fileID: 156046352}
   - component: {fileID: 156046353}
   - component: {fileID: 156046354}
+  - component: {fileID: 156046355}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -329,6 +344,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &156046355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156046351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58850c353ad60384690031c8485287ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1 &230568824
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,6 +368,7 @@ GameObject:
   - component: {fileID: 230568825}
   - component: {fileID: 230568826}
   - component: {fileID: 230568827}
+  - component: {fileID: 230568828}
   m_Layer: 0
   m_Name: Arms
   m_TagString: Untagged
@@ -432,6 +461,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &230568828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230568824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58850c353ad60384690031c8485287ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1 &304491250
 GameObject:
   m_ObjectHideFlags: 3
@@ -613,6 +655,7 @@ GameObject:
   - component: {fileID: 459933769}
   - component: {fileID: 459933770}
   - component: {fileID: 459933771}
+  - component: {fileID: 459933772}
   m_Layer: 0
   m_Name: Tool
   m_TagString: Untagged
@@ -705,6 +748,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &459933772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459933768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58850c353ad60384690031c8485287ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +833,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.3816963, g: 0.4745098, b: 0.19215688, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -899,6 +955,7 @@ GameObject:
   - component: {fileID: 718960056}
   - component: {fileID: 718960057}
   - component: {fileID: 718960058}
+  - component: {fileID: 718960059}
   m_Layer: 0
   m_Name: Hair
   m_TagString: Untagged
@@ -991,6 +1048,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &718960059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718960055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58850c353ad60384690031c8485287ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1 &1305614598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,6 +1150,7 @@ GameObject:
   - component: {fileID: 1312471590}
   - component: {fileID: 1312471591}
   - component: {fileID: 4035960058498515135}
+  - component: {fileID: 1312471592}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1140,6 +1211,45 @@ SortingGroup:
   m_SortingLayerID: 672558347
   m_SortingLayer: 1
   m_SortingOrder: 0
+--- !u!114 &1312471592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312471588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64667515cfcfa747826df625d52ad13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputX: 0
+  inputY: 0
+  isWalking: 0
+  isRunning: 0
+  isIdle: 0
+  isCarrying: 0
+  toolEffect: 0
+  isUsingToolRight: 0
+  isUsingToolLeft: 0
+  isUsingToolUp: 0
+  isUsingToolDown: 0
+  isLiftingToolRight: 0
+  isLiftingToolLeft: 0
+  isLiftingToolUp: 0
+  isLiftingToolDown: 0
+  isPickingRight: 0
+  isPickingLeft: 0
+  isPickingUp: 0
+  isPickingDown: 0
+  isSwingingToolRight: 0
+  isSwingingToolLeft: 0
+  isSwingingToolUp: 0
+  isSwingingToolDown: 0
+  idleUp: 0
+  idleDown: 0
+  idleLeft: 0
+  idleRight: 0
 --- !u!1 &2049930713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,6 +1261,7 @@ GameObject:
   - component: {fileID: 2049930714}
   - component: {fileID: 2049930715}
   - component: {fileID: 2049930716}
+  - component: {fileID: 2049930717}
   m_Layer: 0
   m_Name: hat
   m_TagString: Untagged
@@ -1243,6 +1354,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2049930717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049930713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58850c353ad60384690031c8485287ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &4035960058498515135
 MonoBehaviour:
   m_ObjectHideFlags: 0

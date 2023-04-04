@@ -1,5 +1,5 @@
 public enum ToolEffect
 {
     none,
-    Watering
+   watering
 }
