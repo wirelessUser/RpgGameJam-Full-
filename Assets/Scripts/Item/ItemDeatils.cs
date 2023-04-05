@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class ItemDeatils : MonoBehaviour
+public class ItemDeatils
 {
 
     public int itemCode;
