@@ -11,7 +11,7 @@ public abstract   class SingletonScriptMonoBehaviour<T> : MonoBehaviour where T 
 
 
 
-    public virtual void Awake()
+    protected virtual void Awake()
     {
         if (instance == null)
         {

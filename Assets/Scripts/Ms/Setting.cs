@@ -3,7 +3,9 @@ using UnityEngine;
 
 public static class Setting
 {
-
+    // Playwer Movement ....
+    public const float runningSpeed = 5.333f;
+    public const float walkingSpeed = 2.666f;
 
 
     // Player Animation Parameters
@@ -38,7 +40,7 @@ public static class Setting
 
 
 
-
+ 
 
 
 
