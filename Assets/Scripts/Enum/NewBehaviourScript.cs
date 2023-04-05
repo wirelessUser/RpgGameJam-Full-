@@ -1,5 +1,15 @@
 public enum ToolEffect
 {
     none,
-    Watering
+   watering
+}
+
+
+public enum Direction
+{
+    up,
+    right,
+    left,
+    down,
+    none
 }
