@@ -41,11 +41,11 @@ public class ObscutingItemFader : MonoBehaviour
             currentAlpha = currentAlpha - /*distance /*/ Setting.fadeOutSeconds * Time.deltaTime;
             spriteRendere.color = new Color(1f, 1f, 1f, currentAlpha);
             yield return null;
-            Debug.Log("spriteRendere.color>>"+spriteRendere.color);
+          //  Debug.Log("spriteRendere.color>>"+spriteRendere.color);
         }
 
         //spriteRendere.color = new Color(1f, 1f, 1f, Setting.targetAlpha);
-        Debug.Log("spriteRendere.color = new Color(1f, 1f, 1f, Setting.targetAlpha)>>" + (spriteRendere.color = new Color(1f, 1f, 1f, Setting.targetAlpha)));
+      //  Debug.Log("spriteRendere.color = new Color(1f, 1f, 1f, Setting.targetAlpha)>>" + (spriteRendere.color = new Color(1f, 1f, 1f, Setting.targetAlpha)));
        
     }
     private IEnumerator FadeInRoutine()
