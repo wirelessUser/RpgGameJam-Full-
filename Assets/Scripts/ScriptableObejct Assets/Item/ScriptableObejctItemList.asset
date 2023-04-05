@@ -17,7 +17,7 @@ MonoBehaviour:
     itemType: 0
     itemDescription: canyon Oak Acom
     itemSprite: {fileID: 4789355601316357596, guid: d241c496741a12d4290e12ba81dd6724, type: 3}
-    gitemLongDescritpion: sssssss
+    gitemLongDescritpion: canyon Oak Acom
     itemUsedGridRadius: 2
     itemUseRadius: 0
     isStartingItem: 0
@@ -29,7 +29,7 @@ MonoBehaviour:
     itemType: 1
     itemDescription: Pumpkin
     itemSprite: {fileID: 21300000, guid: f0d720006ae6c9e468cc99a9f1713ba1, type: 3}
-    gitemLongDescritpion: 
+    gitemLongDescritpion: Pumpkin
     itemUsedGridRadius: 2
     itemUseRadius: 0
     isStartingItem: 0
@@ -39,9 +39,9 @@ MonoBehaviour:
     canBeCarried: 1
   - itemCode: 10002
     itemType: 1
-    itemDescription: Corm
+    itemDescription: Corn
     itemSprite: {fileID: 21300000, guid: 081b5033ea188cb48b5d44b99ab920bc, type: 3}
-    gitemLongDescritpion: 
+    gitemLongDescritpion: Corn
     itemUsedGridRadius: 2
     itemUseRadius: 0
     isStartingItem: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
     itemType: 2
     itemDescription: Waterin Can
     itemSprite: {fileID: 21300136, guid: 853ac38383c680342ac7e688bf29b197, type: 3}
-    gitemLongDescritpion: 
+    gitemLongDescritpion: Waterin Can
     itemUsedGridRadius: 1
     itemUseRadius: 0
     isStartingItem: 1
@@ -89,7 +89,7 @@ MonoBehaviour:
     itemType: 0
     itemDescription: Parsnip Seed
     itemSprite: {fileID: 21300000, guid: 7da78110e28e0f74aaa3ef4a41f4c0ed, type: 3}
-    gitemLongDescritpion: 
+    gitemLongDescritpion: Parsnip Seed
     itemUsedGridRadius: 1
     itemUseRadius: 0
     isStartingItem: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
     itemType: 1
     itemDescription: Woood
     itemSprite: {fileID: 21300000, guid: e26dc0d638731ec47abe9c4b3cae62ac, type: 3}
-    gitemLongDescritpion: 
+    gitemLongDescritpion: Woood
     itemUsedGridRadius: 2
     itemUseRadius: 0
     isStartingItem: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
     itemType: 0
     itemDescription: Canyon Oak Tree Stump
     itemSprite: {fileID: 7154603021615155856, guid: d241c496741a12d4290e12ba81dd6724, type: 3}
-    gitemLongDescritpion: 
+    gitemLongDescritpion: Canyon Oak Tree Stump
     itemUsedGridRadius: 0
     itemUseRadius: 0
     isStartingItem: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
     itemType: 0
     itemDescription: Blue Spruce tree Stump
     itemSprite: {fileID: -341119608263849502, guid: 5d22327a2a3d2a049a8a59a708d527fe, type: 3}
-    gitemLongDescritpion: 
+    gitemLongDescritpion: Blue Spruce tree Stump
     itemUsedGridRadius: 0
     itemUseRadius: 0
     isStartingItem: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
     itemType: 7
     itemDescription: Wicker basket
     itemSprite: {fileID: 21300504, guid: 853ac38383c680342ac7e688bf29b197, type: 3}
-    gitemLongDescritpion: 
+    gitemLongDescritpion: Wicker basket
     itemUsedGridRadius: 1
     itemUseRadius: 0
     isStartingItem: 1
@@ -173,7 +173,7 @@ MonoBehaviour:
     itemType: 5
     itemDescription: A basic PickAxe
     itemSprite: {fileID: 21300094, guid: 853ac38383c680342ac7e688bf29b197, type: 3}
-    gitemLongDescritpion: 
+    gitemLongDescritpion: A basic PickAxe
     itemUsedGridRadius: 1
     itemUseRadius: 0
     isStartingItem: 1
@@ -289,7 +289,7 @@ MonoBehaviour:
     CanBeDropped: 0
     canBeEaten: 0
     canBeCarried: 0
-  - itemCode: 0
+  - itemCode: 10023
     itemType: 9
     itemDescription: Table
     itemSprite: {fileID: 0}
