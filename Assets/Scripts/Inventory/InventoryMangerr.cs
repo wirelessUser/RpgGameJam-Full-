@@ -9,7 +9,7 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
     private ScriptableObejctItemList itemList = null;
 
     public List<InventoryItem>[] inventoryList;
-
+    [SerializeField]
     public int[] inventoryListCapacityIntArray;
 
     protected override void Awake()
@@ -40,7 +40,7 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
 
         inventoryListCapacityIntArray = new int[(int)InventoryLocation.count];
 
-        inventoryListCapacityIntArray[(int)InventoryLocation.count] = Setting.playerInitialInventoryCapacity;
+        inventoryListCapacityIntArray[(int)InventoryLocation.count-1] = Setting.playerInitialInventoryCapacity;
     }
 
 
@@ -52,7 +52,24 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
         Destroy(gameObejctToDelete);
     }
 
-    public void AddItem(InventoryLocation inventoryLocation,Item item)
+    //    public void AddItem(InventoryLocation inventoryLocation, Item item)
+    //{
+    //    int itemCode = item.ItemCode;
+
+    //    List<InventoryItem> inventoryListt = inventoryList[(int)inventoryLocation];
+
+    //    int itemPosition = FindItemInventory(inventoryLocation, itemCode);
+
+    //    if (itemPosition != -1)
+    //    {
+    //        AddItemAtPosition(inventoryListt, itemCode, itemPosition);
+    //    }
+    //    else
+    //    {
+    //        AddItemAtPosition(inventoryListt, itemCode);
+    //    }
+    //}
+    public void AddItem(InventoryLocation inventoryLocation, Item item)
     {
         int itemCode = item.ItemCode;
 
@@ -60,7 +77,7 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
 
         int itemPosition = FindItemInventory(inventoryLocation, itemCode);
 
-        if (itemCode!=-1)
+        if (itemPosition != -1)
         {
             AddItemAtPosition(inventoryListt, itemCode, itemPosition);
         }
@@ -70,7 +87,8 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
         }
     }
 
-   public void AddItemAtPosition(List<InventoryItem> inventoryList, int itemCode)
+
+    public void AddItemAtPosition(List<InventoryItem> inventoryList, int itemCode)
     {
         InventoryItem inventoryItem = new InventoryItem();
 
@@ -98,13 +116,28 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
 
 
 
-    public int  FindItemInventory(InventoryLocation inventoryLocation, int itemCode)
-    {
-        List<InventoryItem> iventoryList = inventoryList[(int)inventoryLocation];
+    //public int  FindItemInventory(InventoryLocation inventoryLocation, int itemCode)
+    //{
+    //    List<InventoryItem> iventoryList = inventoryList[(int)inventoryLocation];
 
-        for (int i = 0; i < iventoryList.Count; i++)
+    //    for (int i = 0; i < iventoryList.Count; i++)
+    //    {
+    //        if (inventoryList[i].Count==itemCode)
+    //        {
+    //            return i;
+    //        }
+    //    }
+
+    //    return -1;
+    //}
+
+    public int FindItemInventory(InventoryLocation inventoryLocation, int itemCode)
+    {
+        List<InventoryItem> inventoryLists = inventoryList[(int)inventoryLocation];
+
+        for (int i = 0; i < inventoryLists.Count; i++)
         {
-            if (inventoryList[i].Count==itemCode)
+            if (inventoryLists[i].itemCode == itemCode)
             {
                 return i;
             }
@@ -112,6 +145,7 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
 
         return -1;
     }
+
     public ItemDeatils GetItemDetails(int itemCode)
     {
         ItemDeatils itemDetails;

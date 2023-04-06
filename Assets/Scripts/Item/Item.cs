@@ -32,7 +32,7 @@ public class Item : MonoBehaviour
 
             ItemDeatils itemDetails = InventoryMangerr.instance.GetItemDetails(ItemCode);
 
-            spriteRenderer.sprite = itemDetails.itemSprite;
+         gameObject.transform.GetChild(0).GetComponent< SpriteRenderer>().sprite = itemDetails.itemSprite;
 
             // If item type is reapable then add nudgeable component
             if (itemDetails.itemType == itemType.Reapable_Scenary)
