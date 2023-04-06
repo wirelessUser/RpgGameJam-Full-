@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    [ItemCodeDescription]
     [SerializeField]
     public int _itemCode;
     private SpriteRenderer spriteRenderer;

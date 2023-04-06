@@ -209,7 +209,7 @@ MonoBehaviour:
     itemType: 0
     itemDescription: Stone 2 seed
     itemSprite: {fileID: 21300000, guid: ffd3a07e9702a614284d1e5a4be9f532, type: 3}
-    gitemLongDescritpion: 
+    gitemLongDescritpion: Stone 2 seed
     itemUsedGridRadius: 0
     itemUseRadius: 0
     isStartingItem: 0
@@ -221,7 +221,7 @@ MonoBehaviour:
     itemType: 6
     itemDescription: A Basic Scythe For Reaping
     itemSprite: {fileID: 21300506, guid: 853ac38383c680342ac7e688bf29b197, type: 3}
-    gitemLongDescritpion: 
+    gitemLongDescritpion: A Basic Scythe For Reaping
     itemUsedGridRadius: 2
     itemUseRadius: 1.5
     isStartingItem: 1
@@ -245,7 +245,7 @@ MonoBehaviour:
     itemType: 8
     itemDescription: Grass2
     itemSprite: {fileID: 21300000, guid: e452dd2aa629f624390a9ba516a7c47e, type: 3}
-    gitemLongDescritpion: 
+    gitemLongDescritpion: Grass2
     itemUsedGridRadius: 0
     itemUseRadius: 0
     isStartingItem: 0
@@ -257,7 +257,7 @@ MonoBehaviour:
     itemType: 1
     itemDescription: Weed
     itemSprite: {fileID: 21300000, guid: 25925800440b0e84f9533a314ddca6b5, type: 3}
-    gitemLongDescritpion: 
+    gitemLongDescritpion: Weed
     itemUsedGridRadius: 0
     itemUseRadius: 0
     isStartingItem: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
     itemType: 8
     itemDescription: Pickly Cactus
     itemSprite: {fileID: 21300000, guid: 37e09848a493a0a4b89a743f73f75963, type: 3}
-    gitemLongDescritpion: 
+    gitemLongDescritpion: Pickly Cactus
     itemUsedGridRadius: 0
     itemUseRadius: 0
     isStartingItem: 0
