@@ -7,16 +7,15 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryManager>
     private Dictionary<int, ItemDeatils> itemDetailsDictionary;
     [SerializeField]
     private ScriptableObejctItemList itemList = null;
-    void Start()
-    {
-        CreateItemDetailsDictionary();
-    }
+
+ 
 
 
 
     protected override void Awake()
     {
-        base.Awake();   
+        base.Awake();
+        CreateItemDetailsDictionary();
     }
     public void CreateItemDetailsDictionary()
     {
