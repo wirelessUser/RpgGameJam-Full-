@@ -3215,6 +3215,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5183724568008758809, guid: 22b634d336259f447b5cf20c642434a0, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5183724568008758815, guid: 22b634d336259f447b5cf20c642434a0, type: 3}
       propertyPath: m_Name
       value: UiInventorySlots

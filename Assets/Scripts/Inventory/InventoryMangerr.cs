@@ -85,8 +85,11 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
         {
             AddItemAtPosition(inventoryListt, itemCode);
         }
-    }
 
+
+        EventHandler.CallInventoryUpdatedEvent(inventoryLocation, inventoryList[(int)inventoryLocation]);
+    }
+    
 
     public void AddItemAtPosition(List<InventoryItem> inventoryList, int itemCode)
     {

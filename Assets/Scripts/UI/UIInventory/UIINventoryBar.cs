@@ -52,7 +52,7 @@ public class UIINventoryBar : MonoBehaviour
     {
         if (inventoryLocation == InventoryLocation.player)
         {
-            ClearInventorySlot();
+            //ClearInventorySlot();
 
             if (inventorySlot.Length > 0 && inventoryList.Count > 0)
             {
