@@ -43,11 +43,14 @@ public class Player :  SingletonScriptMonoBehaviour<Player>
 
     public bool PlayerInputisDisabled { get => playerInputisDisabled; set => playerInputisDisabled = value; }
 
+    public Camera maincam;
   protected  override void Awake()
     {
         base.Awake();
 
         rigidBody = GetComponent<Rigidbody2D>();
+        maincam = Camera.main;
+
     }
 
 
@@ -170,4 +173,19 @@ false, false, false, false);
             movementSpeed = Setting.runningSpeed;
         }
     }
+
+
+
+
+    public Vector3 GetPlayerViewPortPosition()
+    {
+        return maincam.WorldToViewportPoint(this.transform.position);
+    }
+
+
+
+
+
+
+
 }// class Ends 
