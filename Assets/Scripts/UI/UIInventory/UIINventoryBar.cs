@@ -11,6 +11,7 @@ public class UIINventoryBar : MonoBehaviour
     [SerializeField] private Sprite blank16x16Sprite;
 
     [SerializeField] private UiInventorySlots1[] inventorySlot;
+    public GameObject InventoryBarDraggedItem;
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();

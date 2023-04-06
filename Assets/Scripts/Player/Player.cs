@@ -56,18 +56,23 @@ public class Player :  SingletonScriptMonoBehaviour<Player>
 
     private void Update()
     {
-        ResetAnimationTriggers();
-        PlayerMovementInput();
 
-        PlayerWalkInput();
+        if (!playerInputisDisabled)
+        {
+            ResetAnimationTriggers();
+            PlayerMovementInput();
+
+            PlayerWalkInput();
 
 
-        EventHandler.CallMovementEvent(xInput, yInput, isWalking, isRunning, isIdle, isCarrying, toolEffect,
-isUsingToolRight, isUsingToolLeft, isUsingToolUp, isUsingToolDown,
-isLiftingToolRight, isLiftingToolLeft, isLiftingToolUp, isLiftingToolDown,
-isPickingRight, isPickingLeft, isPickingUp, isPickingDown,
-isSwingingToolRight, isSwingingToolLeft, isSwingingToolUp, isSwingingToolDown,
-false, false, false, false);
+            EventHandler.CallMovementEvent(xInput, yInput, isWalking, isRunning, isIdle, isCarrying, toolEffect,
+    isUsingToolRight, isUsingToolLeft, isUsingToolUp, isUsingToolDown,
+    isLiftingToolRight, isLiftingToolLeft, isLiftingToolUp, isLiftingToolDown,
+    isPickingRight, isPickingLeft, isPickingUp, isPickingDown,
+    isSwingingToolRight, isSwingingToolLeft, isSwingingToolUp, isSwingingToolDown,
+    false, false, false, false);
+        }
+       
     }
 
 
@@ -182,10 +187,33 @@ false, false, false, false);
         return maincam.WorldToViewportPoint(this.transform.position);
     }
 
+    public void ResetMovement()
+    {
+        xInput = 0;
+        yInput = 0;
+        isRunning = false;
+        isWalking = false;
+        isIdle = true;
+    }
+    public void DisbalePlayerInputAndResetMovement()
+    {
+        DisbalePlayerInput();
+        ResetMovement();
+        EventHandler.CallMovementEvent(xInput, yInput, isWalking, isRunning, isIdle, isCarrying, toolEffect,
+ isUsingToolRight, isUsingToolLeft, isUsingToolUp, isUsingToolDown,
+ isLiftingToolRight, isLiftingToolLeft, isLiftingToolUp, isLiftingToolDown,
+ isPickingRight, isPickingLeft, isPickingUp, isPickingDown,
+ isSwingingToolRight, isSwingingToolLeft, isSwingingToolUp, isSwingingToolDown,
+ false, false, false, false);
+    }
 
-
-
-
-
+    public void DisbalePlayerInput()
+    {
+        playerInputisDisabled = true;
+    }
+    public void EnablePlayerInput()
+    {
+        playerInputisDisabled = false;
+    }
 
 }// class Ends 
