@@ -231,8 +231,8 @@ MonoBehaviour:
     canBeCarried: 0
   - itemCode: 10018
     itemType: 0
-    itemDescription: 
-    itemSprite: {fileID: 0}
+    itemDescription: Grass 1
+    itemSprite: {fileID: 21300000, guid: 207ad99171e171b418bcaaa396d5a6f6, type: 3}
     gitemLongDescritpion: 
     itemUsedGridRadius: 0
     itemUseRadius: 0
