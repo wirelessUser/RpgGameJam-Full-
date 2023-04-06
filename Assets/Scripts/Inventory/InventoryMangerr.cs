@@ -69,6 +69,41 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
     //        AddItemAtPosition(inventoryListt, itemCode);
     //    }
     //}
+
+
+    public void RemoveItem(InventoryLocation inventoryLocation,int itemCode)
+    {
+        List<InventoryItem> inventoryListt = inventoryList[(int)inventoryLocation];
+
+        int itemPosition = FindItemInventory(inventoryLocation, itemCode);
+
+        if (itemPosition!=-1)
+        {
+            RemoveItemAtPosition(inventoryListt, itemCode, itemPosition);
+        }
+
+
+        EventHandler.CallInventoryUpdatedEvent(inventoryLocation, inventoryList[(int)inventoryLocation]);
+    }
+
+    private void RemoveItemAtPosition(List<InventoryItem> inventoryList, int itemCode, int position)
+    {
+        InventoryItem inventoryItem = new InventoryItem();
+
+        int quantity = inventoryList[position].itemQauntity - 1;
+
+        if (quantity > 0)
+        {
+            inventoryItem.itemQauntity = quantity;
+            inventoryItem.itemCode = itemCode;
+            inventoryList[position] = inventoryItem;
+        }
+        else
+        {
+            inventoryList.RemoveAt(position);
+        }
+    }
+
     public void AddItem(InventoryLocation inventoryLocation, Item item)
     {
         int itemCode = item.ItemCode;
@@ -85,8 +120,11 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
         {
             AddItemAtPosition(inventoryListt, itemCode);
         }
-    }
 
+
+        EventHandler.CallInventoryUpdatedEvent(inventoryLocation, inventoryList[(int)inventoryLocation]);
+    }
+    
 
     public void AddItemAtPosition(List<InventoryItem> inventoryList, int itemCode)
     {

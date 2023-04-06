@@ -11,6 +11,7 @@ public class UIINventoryBar : MonoBehaviour
     [SerializeField] private Sprite blank16x16Sprite;
 
     [SerializeField] private UiInventorySlots1[] inventorySlot;
+    public GameObject InventoryBarDraggedItem;
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -52,7 +53,7 @@ public class UIINventoryBar : MonoBehaviour
     {
         if (inventoryLocation == InventoryLocation.player)
         {
-            ClearInventorySlot();
+            //ClearInventorySlot();
 
             if (inventorySlot.Length > 0 && inventoryList.Count > 0)
             {
