@@ -4,6 +4,12 @@ using UnityEngine;
 public static class Setting
 {
 
+    // Inventory
+    public static int playerInitialInventoryCapacity = 24;
+    public static int playerMaximumInventoryCapacity = 48;
+
+
+
     // Obscruting Item, fade ....
 
     public const float fadeInSeconds = 0.25f;
