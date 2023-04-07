@@ -44,7 +44,20 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
     }
 
 
+   public void SwapInventoryItems(InventoryLocation inventoryLOcation,int fromItem, int toItem)
+    {
+        if (fromItem<inventoryList[(int )inventoryLOcation].Count && toItem < inventoryList[(int)inventoryLOcation].Count
+            && fromItem!=toItem&& fromItem>=0 && toItem>=0)
+        {
+            InventoryItem fromInventoryItem = inventoryList[(int)inventoryLOcation][fromItem];
+            InventoryItem toInventoryItem = inventoryList[(int)inventoryLOcation][toItem];
 
+            inventoryList[(int)inventoryLOcation][toItem] = toInventoryItem;
+            inventoryList[(int)inventoryLOcation][fromItem] = fromInventoryItem;
+        }
+
+        EventHandler.CallInventoryUpdatedEvent(inventoryLOcation, inventoryList[(int)inventoryLOcation]);
+    }
     public void AddItem(InventoryLocation inventoryLocation, Item item, GameObject gameObejctToDelete)
     {
         AddItem(inventoryLocation, item);

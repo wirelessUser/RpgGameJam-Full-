@@ -18,7 +18,7 @@ public class UiInventorySlots1 : MonoBehaviour,IBeginDragHandler,IDragHandler,IE
     private GameObject itemPrefab;
     public ItemDeatils itemDetails;
     public int itemQuanity;
-
+    [SerializeField] private int slotNumber = 0;
 
     private void Awake()
     {
@@ -76,7 +76,9 @@ public class UiInventorySlots1 : MonoBehaviour,IBeginDragHandler,IDragHandler,IE
 
             if (eventData.pointerCurrentRaycast.gameObject!=null&& eventData.pointerCurrentRaycast.gameObject.GetComponent<UiInventorySlots1>()!=null)
             {
+                int toSlotNUmber = eventData.pointerCurrentRaycast.gameObject.GetComponent<UiInventorySlots1>().slotNumber;
 
+                InventoryMangerr.instance.SwapInventoryItems(InventoryLocation.player, slotNumber, toSlotNUmber);
             }
             else
             {
