@@ -8,7 +8,13 @@ public static class Setting
     public static int playerInitialInventoryCapacity = 24;
     public static int playerMaximumInventoryCapacity = 48;
 
-
+    //Tools
+    public const string HoeingTool = "Hoe";
+    public const string ChoppingTool = "Axe";
+    public const string BreakingTool = "Pickaxe";
+    public const string ReapingTool = "Scythe";
+    public const string WateringTool = "Watering Can";
+    public const string CollectingTool = "Basket";
 
     // Obscruting Item, fade ....
 
