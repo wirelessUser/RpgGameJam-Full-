@@ -12,11 +12,22 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
     [SerializeField]
     public int[] inventoryListCapacityIntArray;
 
+
+    private int[] selectedInventoryItem;
+
     protected override void Awake()
     {
         base.Awake();
         CreateInventoryList();
         CreateItemDetailsDictionary();
+
+
+        selectedInventoryItem = new int[(int)InventoryLocation.count];
+
+        for (int i = 0; i < selectedInventoryItem.Length; i++)
+        {
+            selectedInventoryItem[i] = -1;
+        }
     }
 
 
@@ -59,9 +70,20 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
 
             inventoryList[(int)inventoryLOcation][toItem] = toInventoryItem;
             inventoryList[(int)inventoryLOcation][fromItem] = fromInventoryItem;
+
+
+            EventHandler.CallInventoryUpdatedEvent(inventoryLOcation, inventoryList[(int)inventoryLOcation]);
         }
 
-        EventHandler.CallInventoryUpdatedEvent(inventoryLOcation, inventoryList[(int)inventoryLOcation]);
+    }
+
+
+    // Clear seledcted Inventory Item..........
+
+    public void ClearSelectedInventoryItem(InventoryLocation inventoryLocation)
+    {
+        selectedInventoryItem[(int)inventoryLocation] = -1;
+
     }
     public void AddItem(InventoryLocation inventoryLocation, Item item, GameObject gameObejctToDelete)
     {
@@ -152,8 +174,8 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
         inventoryItem.itemQauntity = 1;
         inventoryList.Add(inventoryItem);
 
-
-        DebugPrintInventoryList(inventoryList);
+//
+       // DebugPrintInventoryList(inventoryList);
     }
 
     public void AddItemAtPosition(List<InventoryItem> inventoryList, int itemCode, int position)
@@ -167,7 +189,7 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
 
         Debug.ClearDeveloperConsole();
 
-        DebugPrintInventoryList(inventoryList);
+      //  DebugPrintInventoryList(inventoryList);
     }
 
 
@@ -252,12 +274,18 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
         return itemTypeDescritption;
     }
 
-    private void DebugPrintInventoryList(List<InventoryItem> inventoryList)
+
+    public void SetSelectedInventoryItem(InventoryLocation inventoryLocation, int itemCode)
     {
-        foreach (InventoryItem inventoryItem in inventoryList)
-        {
-            Debug.Log("Item Description:" + GetItemDetails(inventoryItem.itemCode).itemDescription + "    Item Quantity: " + inventoryItem.itemQauntity);
-        }
-        Debug.Log("******************************************************************************");
+        selectedInventoryItem[(int)inventoryLocation] = itemCode;
     }
+
+    //private void DebugPrintInventoryList(List<InventoryItem> inventoryList)
+    //{
+    //    foreach (InventoryItem inventoryItem in inventoryList)
+    //    {
+    //        Debug.Log("Item Description:" + GetItemDetails(inventoryItem.itemCode).itemDescription + "    Item Quantity: " + inventoryItem.itemQauntity);
+    //    }
+    //    Debug.Log("******************************************************************************");
+    //}
 }
