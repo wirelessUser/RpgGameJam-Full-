@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-public class UiInventorySlots1 : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
+public class UiInventorySlots1 : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler,IPointerEnterHandler,IPointerExitHandler
 {
     public Camera mianCamera;
     private Transform parentTransform;
@@ -20,10 +20,15 @@ public class UiInventorySlots1 : MonoBehaviour,IBeginDragHandler,IDragHandler,IE
     public int itemQuanity;
     [SerializeField] private int slotNumber = 0;
 
+   
+    private Canvas parentCanvas;
+    [SerializeField] private GameObject inventoryTextBoxPrefab;
+
     private void Awake()
     {
         mianCamera = Camera.main;
         parentTransform = GameObject.FindGameObjectWithTag(Tags.ItemParentTranfom).transform;
+        parentCanvas = GetComponentInParent<Canvas>();
     }
 
    public void  DropSelectedItemAtMousePosition()
@@ -79,6 +84,8 @@ public class UiInventorySlots1 : MonoBehaviour,IBeginDragHandler,IDragHandler,IE
                 int toSlotNUmber = eventData.pointerCurrentRaycast.gameObject.GetComponent<UiInventorySlots1>().slotNumber;
 
                 InventoryMangerr.instance.SwapInventoryItems(InventoryLocation.player, slotNumber, toSlotNUmber);
+                DestroyInventoryTextBox();
+
             }
             else
             {
@@ -91,5 +98,50 @@ public class UiInventorySlots1 : MonoBehaviour,IBeginDragHandler,IDragHandler,IE
             Player.Instance.EnablePlayerInput();
         }
 
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (itemQuanity>0)
+        {
+            Debug.Log("Isde Poinbte click");
+            inventoryBar.inventoryTextBoxGameObejct = Instantiate(inventoryTextBoxPrefab, transform.position, Quaternion.identity);
+          inventoryBar.inventoryTextBoxGameObejct.transform.SetParent(parentCanvas.transform, false);
+
+            UIInventoryTextBox inventoryTextBox = inventoryBar.inventoryTextBoxGameObejct.GetComponent<UIInventoryTextBox>();
+
+            string itemTypeDescription = InventoryMangerr.Instance.GetItemTypeDescription(itemDetails.itemType);
+
+
+            inventoryTextBox.SetTextBoxText(itemDetails.itemDescription, itemTypeDescription, "-", itemDetails.gitemLongDescritpion, "", "");
+
+
+
+            //if (inventoryBar._isInventoryBarPositionBottom)
+            //{
+             inventoryBar.inventoryTextBoxGameObejct.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 0);
+                inventoryBar.inventoryTextBoxGameObejct.transform.position = new Vector3(transform.position.x, transform.position.y , transform.position.z);
+            //}
+            //else
+            //{
+            //  inventoryBar.inventoryTextBoxGameObejct.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 1);
+            //    inventoryBar.inventoryTextBoxGameObejct.transform.position = new Vector3(transform.position.x, transform.position.y , transform.position.z);
+            //}
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        DestroyInventoryTextBox();
+        
+    }
+
+    public void DestroyInventoryTextBox()
+    {
+        if (inventoryBar.inventoryTextBoxGameObejct!=null)
+        {
+            //Destroy(inventoryBar.inventoryTextBoxGameObejct);
+            DestroyImmediate(inventoryBar.inventoryTextBoxGameObejct);
+        }
     }
 }

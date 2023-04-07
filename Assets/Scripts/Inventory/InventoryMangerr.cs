@@ -20,6 +20,8 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
     }
 
 
+
+
     public void CreateInventoryList()
     {
         inventoryList = new List<InventoryItem>[(int)InventoryLocation.count];
@@ -42,6 +44,9 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
 
         inventoryListCapacityIntArray[(int)InventoryLocation.count-1] = Setting.playerInitialInventoryCapacity;
     }
+
+
+
 
 
    public void SwapInventoryItems(InventoryLocation inventoryLOcation,int fromItem, int toItem)
@@ -212,6 +217,40 @@ public class InventoryMangerr : SingletonScriptMonoBehaviour<InventoryMangerr>
         }
     }
 
+
+    public string GetItemTypeDescription(itemType itemTypes)
+    {
+        string itemTypeDescritption;
+        switch (itemTypes)
+        {
+            case itemType.Breaking_tool:
+                itemTypeDescritption = Setting.BreakingTool;
+                break;
+
+            case itemType.Chopping_Tool:
+                itemTypeDescritption = Setting.ChoppingTool;
+                break;
+            case itemType.Hoing_Tool:
+                itemTypeDescritption = Setting.HoeingTool;
+                break;
+            case itemType.Reaping_Tool:
+                itemTypeDescritption = Setting.ReapingTool;
+                break;
+            case itemType.Watering_Tool:
+                itemTypeDescritption = Setting.WateringTool;
+                break;
+            case itemType.Collecting_tool:
+                itemTypeDescritption = Setting.CollectingTool;
+                break;
+
+            default:
+                itemTypeDescritption = itemTypes.ToString();
+                break;
+
+        }
+
+        return itemTypeDescritption;
+    }
 
     private void DebugPrintInventoryList(List<InventoryItem> inventoryList)
     {

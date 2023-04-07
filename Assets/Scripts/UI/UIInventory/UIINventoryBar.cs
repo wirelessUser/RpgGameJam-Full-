@@ -6,12 +6,14 @@ public class UIINventoryBar : MonoBehaviour
 {
     private RectTransform rectTransform;
 
-    private bool _isInventoryBarPositionBottom = true;
+    public bool _isInventoryBarPositionBottom = true;
 
     [SerializeField] private Sprite blank16x16Sprite;
 
     [SerializeField] private UiInventorySlots1[] inventorySlot;
     public GameObject InventoryBarDraggedItem;
+
+    public GameObject inventoryTextBoxGameObejct;
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
